@@ -10,7 +10,7 @@ model_name = "regression.joblib"
 
 while True:
 
-    X = np.random.randn(100, 2)
+    X = np.random.randn(10, 2)
     y = 2 * X[:, 0] - 0.1 * X[:, 1]
 
     model = LinearRegression()
@@ -22,4 +22,4 @@ while True:
     data = {'model_name' : "regression.joblib"}
     requests.post(url="http://model_api:80/new_model", json=data)
 
-    time.sleep(60)
+    time.sleep(30)

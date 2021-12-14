@@ -38,7 +38,6 @@ async def get_new_model(item: Item_model):
 @app.post("/predict")
 async def predict(item: Item_list):
     X = np.array(item.X)
-    print(X.shape)
 
     if len(X.shape) == 1:
         X = X.reshape(1, -1)
